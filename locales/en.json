@@ -1,0 +1,14 @@
+{
+  "welcome": "welcome english",
+  "hide": "Hide",
+  "about": "About",
+  "frontend": "Front-end",
+  "backend": "Back-end",
+  "devops": "Devops",
+  "science": "Science",
+  "politics": "Politics",
+  "points": "Points",
+  "stories": "Stories",
+  "nodata": "I am working on this, coming soon!",
+  "badcolors": "I know that the colors in night mode arn't good right now, I'll improve and I'll be glad if you tell me some best practices =)))"
+}
