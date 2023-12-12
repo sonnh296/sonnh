@@ -134,7 +134,7 @@ const handleNotyetLinked = (media: string) => {
     message: h(
       "i",
       { style: "color: teal" },
-      media + " hasn't linked yet, I will update later!"
+      media + " hasn't been linked yet, I will update later!"
     ),
   });
 };
