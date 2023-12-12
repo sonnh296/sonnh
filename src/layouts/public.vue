@@ -145,7 +145,7 @@ body {
     li {
       color: #ebf4f1;
     }
-    && :hover {
+    & :hover {
       color: #091a28;
     }
   }
