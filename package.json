@@ -8,7 +8,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "api": "openapi-typescript docs/api.json -o src/plugins/generate/api.d.ts"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.7",
@@ -18,6 +19,7 @@
     "@nuxtjs/i18n": "^8.0.0-rc.5",
     "autoprefixer": "^10.4.16",
     "nuxt": "^3.8.2",
+    "openapi-typescript": "^6.7.3",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "vue": "^3.3.8",
