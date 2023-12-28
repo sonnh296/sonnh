@@ -120,7 +120,7 @@
         </NuxtLink>
       </div>
     </div>
-    <h1 class="text-center pt-4">sonnh296@gmail.com</h1>
+    <h1 class="text-center pt-4">sonnh296@gmail.com / dockerizeme@gmail.com</h1>
   </div>
 </template>
 
