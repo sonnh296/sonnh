@@ -1,21 +1,111 @@
 <template>
-  <div class="mt-2">
-    <select v-model="locale" class="language">
-      <option key="vi" label="Tiếng Việt" value="vi"></option>
-      <option key="en" label="English" value="en"></option>
-    </select>
+  <div class="flex mt-2">
+    <label class="switch">
+      <input
+        :checked="locale == 'en'"
+        type="checkbox"
+        class="input"
+        :onClick="changeMode"
+      />
+      <span class="slider"></span>
+    </label>
+    <span class="pl-2 pt-1 font-bold">
+      <p v-if="locale == 'vi'">Tiếng Việt</p>
+      <p v-if="locale == 'en'">English</p>
+    </span>
   </div>
 </template>
 
 <script setup lang="ts">
 const { locale } = useI18n();
+
+const changeMode = () => {
+  locale.value = locale.value == "en" ? "vi" : "en";
+};
 </script>
 
 <style scoped>
-.language {
-  border: 1px solid #333;
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
 }
-.dark-mode .language {
-  background-color: darkcyan;
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+/* .switch:hover */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moonsvg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
 }
 </style>

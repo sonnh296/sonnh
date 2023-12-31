@@ -89,7 +89,7 @@
   </div>
   <Footer />
   <el-affix position="bottom" :offset="40">
-    <div class="flex-col pl-2">
+    <div class="flex-col pl-2 bg-slate-200 w-44 p-2 rounded-md ml-2">
       <DarklightButton />
       <LanguageButton />
     </div>
