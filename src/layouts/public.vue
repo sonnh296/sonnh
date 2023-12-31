@@ -89,7 +89,9 @@
   </div>
   <Footer />
   <el-affix position="bottom" :offset="40">
-    <div class="flex-col pl-2 bg-slate-200 w-44 p-2 rounded-md ml-2">
+    <div
+      class="banner-language flex-col pl-2 bg-slate-200 w-44 p-2 rounded-md ml-2"
+    >
       <DarklightButton />
       <LanguageButton />
     </div>
@@ -124,7 +126,7 @@ body {
   max-width: 100%;
 }
 .dark-mode body {
-  background-color: #091a28;
+  background-color: #1a1a1a;
   color: #ebf4f1;
   .headers {
     background-color: #091a28;
@@ -138,6 +140,10 @@ body {
       color: #091a28;
     }
   }
+}
+
+.dark-mode .banner-language {
+  background-color: #282828;
 }
 
 .line {

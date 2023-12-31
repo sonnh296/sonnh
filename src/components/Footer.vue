@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed bottom-0 w-full h-20 flex-col justify-evenly bg-slate-100 rounded-md m-5 -z-10"
+    class="footer fixed bottom-0 w-full h-20 flex-col justify-evenly bg-slate-100 rounded-md m-5 -z-10"
   >
     <div>
       <div class="m-auto w-96 flex justify-evenly">
@@ -146,3 +146,9 @@ const handleNotyetLinked = (media: string) => {
   });
 };
 </script>
+
+<style>
+.dark-mode .footer {
+  background-color: #131314;
+}
+</style>

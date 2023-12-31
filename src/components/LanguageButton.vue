@@ -24,7 +24,7 @@ const changeMode = () => {
 };
 </script>
 
-<style scoped>
+<style>
 .switch {
   font-size: 17px;
   position: relative;
