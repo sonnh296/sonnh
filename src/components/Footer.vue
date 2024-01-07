@@ -1,6 +1,6 @@
 <template>
   <div
-    class="footer fixed bottom-0 w-full h-20 flex-col justify-evenly bg-slate-100 rounded-md m-5 -z-10"
+    class="footer fixed bottom-0 w-full h-20 flex-col justify-evenly bg-slate-100 rounded-md m-5"
   >
     <div>
       <div class="m-auto w-96 flex justify-evenly">
@@ -134,7 +134,6 @@
 <script setup lang="ts">
 import { h } from "vue";
 import { ElNotification } from "element-plus";
-
 const handleNotyetLinked = (media: string) => {
   ElNotification({
     title: "Noti:",
