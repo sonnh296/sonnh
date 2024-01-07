@@ -13,17 +13,8 @@
     <div class="line"></div>
   </div>
 
-  <div class="flex">
-    <el-menu default-active="2" :collapse="isCollapse" class="menuitems">
-      <el-menu-item index="0">
-        <el-icon><MoreFilled /></el-icon>
-        <span>{{ $t("hide") }}</span>
-        <div
-          v-on:click="handleCloseMenu"
-          class="absolute left-0 h-full w-full"
-          to="/"
-        ></div>
-      </el-menu-item>
+  <div class="flex justify-evenly">
+    <el-menu default-active="2" class="menuitems max-w-full" mode="horizontal">
       <el-menu-item index="1">
         <el-icon><icon-menu /></el-icon>
         <span>{{ $t("home") }}</span>
@@ -59,19 +50,11 @@
         ></NuxtLink>
       </el-menu-item>
       <el-menu-item index="6">
-        <el-icon><Rank /></el-icon>
-        <span>{{ $t("politics") }}</span>
-        <NuxtLink
-          class="absolute left-0 h-full w-full"
-          to="/politics"
-        ></NuxtLink>
-      </el-menu-item>
-      <el-menu-item index="7">
         <el-icon><View /></el-icon>
         <span>{{ $t("points") }}</span>
         <NuxtLink class="absolute left-0 h-full w-full" to="/points"></NuxtLink>
       </el-menu-item>
-      <el-menu-item index="8">
+      <el-menu-item index="7">
         <el-icon><EditPen /></el-icon>
         <span>{{ $t("stories") }}</span>
         <NuxtLink
@@ -85,38 +68,30 @@
         <NuxtLink class="absolute left-0 h-full w-full" to="/about"></NuxtLink>
       </el-menu-item>
     </el-menu>
-    <slot class="p-4" />
   </div>
+  <div class="p-4 pl-10">
+    <slot />
+  </div>
+
   <Footer />
-  <el-affix position="bottom" :offset="40">
-    <div
-      class="banner-language flex-col pl-2 bg-slate-200 w-44 p-2 rounded-md ml-2"
-    >
-      <DarklightButton />
-      <LanguageButton />
-    </div>
-  </el-affix>
+  <div
+    class="banner-language flex-col pl-2 bg-slate-200 w-44 p-2 rounded-md ml-2 bottom-28 fixed z-10 right-0"
+  >
+    <DarklightButton />
+    <LanguageButton />
+  </div>
 </template>
 
 <script setup lang="ts">
 import {
   Menu as IconMenu,
   Magnet,
-  Rank,
   Crop,
   UploadFilled,
   Setting,
   View,
-  MoreFilled,
   EditPen,
 } from "@element-plus/icons-vue";
-import { ref } from "vue";
-
-const isCollapse = ref(false);
-
-const handleCloseMenu = () => {
-  isCollapse.value = !isCollapse.value;
-};
 </script>
 
 <style>
