@@ -12,9 +12,12 @@
 
     <div class="line"></div>
   </div>
-
-  <div class="flex justify-evenly">
-    <el-menu default-active="2" class="menuitems max-w-full" mode="horizontal">
+  <div class="flex justify-evenly fixed w-full">
+    <el-menu
+      default-active="1"
+      class="menuitems max-w-full m-auto"
+      mode="horizontal"
+    >
       <el-menu-item index="1">
         <el-icon><icon-menu /></el-icon>
         <span>{{ $t("home") }}</span>
@@ -69,7 +72,7 @@
       </el-menu-item>
     </el-menu>
   </div>
-  <div class="p-4 pl-10">
+  <div class="p-4 pl-10 mt-12">
     <slot />
   </div>
 
