@@ -1,5 +1,12 @@
 <template>
   <div class="lg:w-4/5 text-2xl">
+    <div>
+      <img
+        src="~/../public/img/intro.jpg"
+        alt="ss"
+        class="object-contain h-60 w-90"
+      />
+    </div>
     <h1>Hi,</h1>
     <p>
       I'm here to help you improve your programming skills and share my

@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "/public/favicon.ico" },
+        { rel: "icon", type: "image/svg+xml", href: "~/../public/dog.ico" },
       ],
     },
   },
@@ -49,5 +49,8 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  pinia: {
+    storesDirs: ["./stores/**", "./src/stores/**"],
   },
 });
